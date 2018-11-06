@@ -13,8 +13,10 @@ public class DiceCubeGame {
     public static void main(String[] args) {
 
         Scanner read = new Scanner(System.in);
-        Player ja = new PlayerComp();
-        int wybor;
+        Player ja = new PlayerComp(new ConsoleInput());
+        // int wybor;
+        
+       // ja.setTextInput(new ConsoleInput());
 
         // System.out.println("---- WITAMY W DICECUBEGAME ----");
         // System.out.println("    1)GRAJ PRZECIWKO KOMPUTEROWI\n    2)GRAJ PRZECIWKO GRACZOWI");
@@ -29,7 +31,7 @@ public class DiceCubeGame {
             //ja.setName("Ziutek");
             ja.askForName();
         } catch (Exception ex) {
-            System.err.println("Błąd. " + ex.getMessage());
+           System.err.println("Błąd " + ex.getMessage());
         }
 
         Random dice = new Random();

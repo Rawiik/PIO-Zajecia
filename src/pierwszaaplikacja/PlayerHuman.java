@@ -12,11 +12,12 @@ public class PlayerHuman extends Player {
     int quessCube = 0;
     Scanner read = new Scanner(System.in);
 
-    public PlayerHuman() {
+    public PlayerHuman(TextInput in) {
+        super(in);
     }
 
-    public PlayerHuman(String name) {
-        super.setName(name);
+    public PlayerHuman(TextInput in, String name) {
+        super(in, name);
     }
 
     @Override

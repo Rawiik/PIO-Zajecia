@@ -11,11 +11,12 @@ public class PlayerComp extends Player {
 
     Random rand = new Random();
 
-    public PlayerComp() {
+    public PlayerComp(TextInput in) {
+        super(in);
     }
 
-    public PlayerComp(String name) {
-        super.setName(name);
+    public PlayerComp(TextInput in, String name) {
+        super(in, name);
     }
 
     @Override

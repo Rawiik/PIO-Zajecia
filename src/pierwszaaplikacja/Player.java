@@ -13,11 +13,14 @@ abstract public class Player {
     private String name = "Ferdynand Kiepski";
     private Scanner gracz = new Scanner(System.in);
     private Random quess = new Random();
+    private TextInput in;
 
-    public Player() {
+    public Player(TextInput in) {
+        this.in = in;
     }
 
-    public Player(String name) {
+    public Player(TextInput in, String name) {
+        this.in = in;
         setName(name);
     }
 
@@ -46,9 +49,10 @@ abstract public class Player {
     }
 
     public void askForName() {
-        System.out.print("Set your name: ");
-        TextInput in = new GUIInput();
         setName(in.getText());
     }
 
+    void setTextInput(TextInput in) {
+        this.in = in;
+    }
 }
